@@ -5,6 +5,8 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: tf-jx-top-drum
     devEnvApprovers:
     - evill-bot
     - evillgenius75
@@ -12,21 +14,38 @@ spec:
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "548617104708"
+    project: eddiejv-stp-appmod-demo
     provider: gke
     registry: gcr.io
+    zone: us-central1-a
   environments:
   - key: dev
+    owner: evillgenius75
+    repository: jx3-gke-gsm
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: 34.69.44.159.nip.io
     externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
-      production: false
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: evill-bot
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-tf-jx-top-drum-366632344bbc
+  - name: reports
+    url: gs://reports-tf-jx-top-drum-366632344bbc
+  - name: repository
+    url: gs://repository-tf-jx-top-drum-366632344bbc
   vault: {}
   webhook: lighthouse
