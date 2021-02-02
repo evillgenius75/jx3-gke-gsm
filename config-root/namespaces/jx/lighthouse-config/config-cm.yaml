@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - evillgenius75/jx3-gke-gsm
-      target_url: http://dashboard-jx.
+      target_url: http://dashboard-jx.34.69.44.159.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null

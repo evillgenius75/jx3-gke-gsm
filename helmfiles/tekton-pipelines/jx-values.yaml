@@ -41,7 +41,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: 34.69.44.159.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
