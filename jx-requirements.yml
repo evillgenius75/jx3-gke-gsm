@@ -6,8 +6,9 @@ spec:
     schedule: ""
   cluster:
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
+    - evill-bot
+    - evillgenius75
+    environmentGitOwner: evill-bot
     gitKind: github
     gitName: github
     gitServer: https://github.com
